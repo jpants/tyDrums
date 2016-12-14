@@ -1,0 +1,62 @@
+html, body, #app {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+#app {
+	background-image: url(../images/TylerWebsite.png);
+	background-repeat: none;
+	background-position: center;
+	background-size: cover;
+}
+
+header {
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	font-weight: 300;
+	text-align: center;
+	padding: 30px;
+}
+
+header ul li {
+	color: rgba(255,255,255,.7);
+	display: inline-block;
+	margin: 8px 18px;
+	letter-spacing: 3px;
+}
+
+header ul li:hover{
+	color: rgba(255,255,255,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,467 @@
+@font-face {
+  font-family: "Arkhip";
+  src: url(./Arkhip_font.ttf) format("truetype"); }
+body, #app {
+  height: 100%;
+  width: 100%;
+  overflow: auto; }
+
+body {
+  color: white;
+  font-family: 'Merriweather Sans', sans-serif; }
+
+#app {
+  background-image: url(./TylerWebsite.png);
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+
+#appWrap {
+  min-height: 100%;
+  position: relative; }
+  #appWrap.nonHome {
+    background-color: rgba(0, 0, 0, 0.5); }
+
+/*************************************
+NavBar Mobile
+**************************************/
+#mobileView {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 1200;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  vertical-align: bottom;
+  line-height: 0px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); }
+  #mobileView.hidden {
+    height: initial;
+    background-color: initial;
+    z-index: 1000; }
+
+#menuButton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: block;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 27px;
+  width: 33px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.9);
+  border: none;
+  outline: none;
+  z-index: 1000; }
+
+.buttonBars {
+  position: relative;
+  background-color: white;
+  height: 3px;
+  width: 33px;
+  border-radius: 2px;
+  top: 0px; }
+
+#topBar {
+  transition: transform 0.5s ease-in-out 0s, top 0.5s ease-in-out 0s;
+  transform-origin: 50% 50%;
+  top: -6px; }
+  #topBar.topMove {
+    transform: rotate(225deg);
+    top: 3px; }
+
+#middleBar {
+  transition: transform 0.5s ease-in-out 0s;
+  transform-origin: 50% 50%;
+  top: 0px; }
+  #middleBar.midMove {
+    transform: rotate(225deg); }
+
+#bottomBar {
+  transition: transform 0.5s ease-in-out 0s, top 0.5s ease-in-out 0s;
+  transform-origin: 50% 50%;
+  top: 6px; }
+  #bottomBar.botMove {
+    transform: rotate(315deg);
+    top: -3px; }
+
+#navBar {
+  display: inline-block; }
+  #navBar.hidden {
+    display: none; }
+  #navBar li {
+    color: white;
+    display: inline-block;
+    margin: 35px 25% 0;
+    letter-spacing: 3px;
+    cursor: pointer;
+    line-height: initial; }
+    @media (min-height: 568px) {
+      #navBar li {
+        margin: 45px 25% 0; } }
+
+/*************************************
+NavBar Standard
+**************************************/
+#standardView {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 1200;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  padding: 30px 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+  #standardView ul li {
+    color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    margin: 8px 18px;
+    letter-spacing: 3px;
+    cursor: pointer; }
+    #standardView ul li:hover {
+      color: white; }
+
+/*************************************
+Home
+**************************************/
+.contentStuff, #homeWrap, #bioWrap, #rapWrap, #vidWrap, #contactWrap {
+  position: relative;
+  z-index: 900;
+  width: 100%;
+  text-align: center;
+  min-height: calc(100vh - 80px); }
+  @media (min-width: 375px) {
+    .contentStuff, #homeWrap, #bioWrap, #rapWrap, #vidWrap, #contactWrap {
+      min-height: calc(calc(100vh - 80px) - 8px); } }
+  @media (min-width: 412px) {
+    .contentStuff, #homeWrap, #bioWrap, #rapWrap, #vidWrap, #contactWrap {
+      min-height: calc(calc(100vh - 80px) - 13px); } }
+  @media (min-width: 769px) {
+    .contentStuff, #homeWrap, #bioWrap, #rapWrap, #vidWrap, #contactWrap {
+      min-height: calc(calc(100vh - 80px) + 10px); } }
+
+/*************************************
+Banner
+**************************************/
+.bannerWrap {
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%); }
+
+.bannerBorder {
+  position: relative;
+  border: 4px solid white;
+  display: inline-block;
+  padding: 0 0.2% 0 0.6%; }
+
+.banner {
+  position: relative;
+  font-family: 'Arkhip', 'Merriweather Sans';
+  color: white;
+  font-size: 12.15vw;
+  display: inline-block;
+  margin: 3.4% 0 0; }
+
+.dots {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  height: 11%;
+  width: 1.7%;
+  top: 5%; }
+
+#leftDot {
+  left: 69.3%; }
+
+#rightDot {
+  left: 76.2%; }
+
+/*************************************
+Bio
+**************************************/
+.nonHomeBanner.bannerWrap, .bannerWrap#bioBanner, .bannerWrap#rapBanner, .bannerWrap#vidBanner, .bannerWrap#contactBanner {
+  top: 0;
+  transform: translateY(0);
+  padding: 45px 0 0; }
+  .nonHomeBanner.bannerWrap.standard, .bannerWrap.standard#bioBanner, .bannerWrap.standard#rapBanner, .bannerWrap.standard#vidBanner, .bannerWrap.standard#contactBanner {
+    padding: 102px 0 0; }
+@media (min-width: 640px) {
+  .nonHomeBanner .banner, #bioBanner .banner, #rapBanner .banner, #vidBanner .banner, #contactBanner .banner {
+    font-size: 78px; } }
+
+#tyPic {
+  display: inline-block;
+  background-image: url(./tylerPic.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  margin: 25px;
+  border-radius: 50%; }
+
+.textStuff, #bioTextBox, #rapTextBox {
+  text-align: center; }
+  .textStuff p, #bioTextBox p, #rapTextBox p {
+    display: inline-block;
+    width: 75vw;
+    text-align: left;
+    padding: 5px 0 35px;
+    line-height: 1.4;
+    font-weight: 300; }
+    @media (min-width: 833px) {
+      .textStuff p, #bioTextBox p, #rapTextBox p {
+        width: 625px; } }
+
+/*************************************
+RapSheet
+**************************************/
+#rapWrap h2 {
+  display: inline-block;
+  width: 100%;
+  padding: 30px 0;
+  font-size: 2em;
+  font-family: 'Arkhip', 'Merriweather Sans'; }
+
+hr {
+  width: 80vw; }
+
+#rapTextBox p {
+  padding: 30px 0 0; }
+
+#hireButton {
+  font-family: 'Merriweather Sans', sans-serif;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 2px solid white;
+  margin: 20px 0 35px;
+  line-height: initial;
+  font-size: 14px;
+  padding: 11px;
+  font-weight: 100;
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
+  cursor: pointer;
+  color: white; }
+  #hireButton:hover {
+    background-color: white;
+    color: grey; }
+
+#albumsWrap {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  max-width: 630px;
+  padding: 0 0 30px; }
+
+.albums {
+  display: inline-block;
+  width: 37vw;
+  max-width: 175px;
+  max-height: 175px;
+  height: 37vw;
+  background-color: grey;
+  margin: 5px; }
+
+/*************************************
+Videos
+**************************************/
+.yt {
+  display: inline-block;
+  margin: 3%;
+  width: 80vw;
+  height: 45vw;
+  max-width: 800px;
+  max-height: 450px; }
+
+/*************************************
+Contact
+**************************************/
+#contactWrap h2 {
+  display: inline-block;
+  padding: 40px 0 34px;
+  font-size: 2.25em;
+  font-family: 'Arkhip', 'Merriweather Sans';
+  letter-spacing: 2px; }
+
+.formTextStuff, #fNameContact, #lNameContact, #emailContact, #subjectContact, #commentContact, #submitBtnContact {
+  font-family: 'Merriweather Sans', sans-serif;
+  line-height: initial;
+  font-size: 14px;
+  padding: 11px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font-weight: 100;
+  border: 1px solid #ccc; }
+
+#contactForm {
+  padding: 0 0 40px; }
+
+#contactTable {
+  text-align: center;
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 450px; }
+
+#fNameContact {
+  margin-right: 3%;
+  width: 97%; }
+
+#lNameContact {
+  margin-left: 3%;
+  width: 97%; }
+
+.spacerContact {
+  line-height: 30px; }
+
+#emailContact {
+  width: 100%; }
+
+#subjectContact {
+  width: 100%; }
+
+#commentContact {
+  width: 100%; }
+
+#submitBtnContact {
+  margin: 0px;
+  border-radius: 0px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  letter-spacing: 2px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer; }
+  #submitBtnContact:hover {
+    background-color: white;
+    color: grey; }
+
+/*************************************
+Mobile Social Links
+**************************************/
+#mobileSocLinkWrap {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  overflow: hidden; }
+  #mobileSocLinkWrap a {
+    display: inline-block;
+    height: 80px;
+    width: 24%;
+    text-align: center;
+    z-index: 1100; }
+    @media (min-width: 375px) {
+      #mobileSocLinkWrap a {
+        height: 88px; } }
+    @media (min-width: 412px) {
+      #mobileSocLinkWrap a {
+        height: 93px; } }
+  #mobileSocLinkWrap .socLinks {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    height: 60px;
+    width: 60px;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%); }
+  #mobileSocLinkWrap #facebook {
+    background-image: url(./FB-f-Logo__white_144.png);
+    margin: 0; }
+  #mobileSocLinkWrap #twitter {
+    background-image: url(./twitter-logo-white-144.png);
+    height: 110px;
+    width: 110px;
+    left: -15px;
+    z-index: 1090; }
+    @media (min-width: 360px) {
+      #mobileSocLinkWrap #twitter {
+        left: -10px; } }
+    @media (min-width: 375px) {
+      #mobileSocLinkWrap #twitter {
+        left: -8px; } }
+    @media (min-width: 412px) {
+      #mobileSocLinkWrap #twitter {
+        left: -3.5px; } }
+    @media (min-width: 414px) {
+      #mobileSocLinkWrap #twitter {
+        left: -3px; } }
+    @media (min-width: 568px) {
+      #mobileSocLinkWrap #twitter {
+        left: 0px; } }
+  #mobileSocLinkWrap #instagram {
+    background-image: url(./insta-logo-white-144.png);
+    margin: 0; }
+  #mobileSocLinkWrap #soundcloud {
+    background-image: url(./soundcloud-white-60.png);
+    height: 80px;
+    width: 80px;
+    left: -3px;
+    z-index: 1090; }
+
+/*************************************
+Social Links
+**************************************/
+#socLinkWrap {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  overflow: hidden; }
+  #socLinkWrap .backGlow {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 0 8px;
+    border-radius: 50%;
+    transition: 0.12s all ease-in; }
+    #socLinkWrap .backGlow:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3); }
+  #socLinkWrap .socLinks {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 39px;
+    width: 39px;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.85; }
+  #socLinkWrap .facebook {
+    background-image: url(./FB-f-Logo__white_144.png);
+    height: 25px;
+    width: 25px;
+    margin: 0; }
+    #socLinkWrap .facebook:hover {
+      opacity: 1; }
+  #socLinkWrap .twitter {
+    background-image: url(./twitter-logo-white-144.png);
+    left: -4.5px; }
+    #socLinkWrap .twitter:hover {
+      opacity: 1; }
+  #socLinkWrap .instagram {
+    background-image: url(./insta-logo-white-144.png);
+    height: 25px;
+    width: 25px;
+    margin: 0; }
+    #socLinkWrap .instagram:hover {
+      opacity: 1; }
+  #socLinkWrap .soundcloud {
+    background-image: url(./soundcloud-white-60.png);
+    left: -4.5px; }
+    #socLinkWrap .soundcloud:hover {
+      opacity: 1; }
+
+/*# sourceMappingURL=style.css.map */
